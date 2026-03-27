@@ -1,0 +1,15 @@
+import { NextResponse } from "next/server";
+
+const SESSION_COOKIE = "inv_suite_session";
+
+export async function POST() {
+  const response = NextResponse.json({ ok: true });
+  response.cookies.set(SESSION_COOKIE, "", {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: false,
+    path: "/",
+    maxAge: 0,
+  });
+  return response;
+}

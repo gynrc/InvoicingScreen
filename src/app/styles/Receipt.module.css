@@ -1,0 +1,297 @@
+.receiptPage {
+  background: #d9d9d9;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.paper {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: #fff;
+  padding: 10mm;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  line-height: 1.15;
+}
+
+.printActions {
+  width: 210mm;
+  margin: 0 auto 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.printButton {
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  padding: 8px 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.topHeader {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 8px;
+}
+
+.leftHeader,
+.centerHeader,
+.rightHeader {
+  min-height: 120px;
+}
+
+.headerRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.customerBlock {
+  margin-bottom: 14px;
+  white-space: pre-line;
+}
+
+.contactRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.contactGap {
+  margin-left: 18px;
+}
+
+.centerHeader {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.invoiceNumber {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.invoiceWord,
+.pageWord {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.rightHeader {
+  text-align: right;
+}
+
+.logoCircle {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.companyName {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.companyText {
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.metaSection {
+  margin-bottom: 10px;
+}
+
+.serviceAdvisorRow {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.serviceAdvisorLabel,
+.serviceAdvisorValue {
+  padding: 4px 6px;
+}
+
+.serviceAdvisorLabel {
+  border-right: 1px solid #000;
+  font-weight: 700;
+}
+
+.metaTable,
+.linesTable,
+.totalsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.metaTable th,
+.metaTable td,
+.linesTable th,
+.linesTable td,
+.totalsTable td {
+  border: 1px solid #000;
+  padding: 4px 5px;
+  vertical-align: top;
+}
+
+.metaTable th,
+.linesTable th {
+  font-weight: 700;
+  text-align: left;
+}
+
+.roRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.roBox,
+.roBoxWide {
+  padding: 4px 6px;
+  border-right: 1px solid #000;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.roBoxWide {
+  border-right: 0;
+}
+
+.linesSection {
+  margin-bottom: 8px;
+}
+
+.descriptionCell {
+  width: 100%;
+}
+
+.amountCell {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.commentsSection {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 6px;
+  min-height: 120px;
+}
+
+.commentLine {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.bottomSection {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 0;
+  margin-top: 10px;
+}
+
+.conditionsBox {
+  border: 1px solid #000;
+  border-right: 0;
+  padding: 8px;
+}
+
+.conditionsTitle {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.signatureLine {
+  margin-top: 30px;
+  border-top: 1px solid #000;
+  width: 180px;
+  padding-top: 4px;
+  font-size: 11px;
+}
+
+.overleafText {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.totalsBox {
+  border: 1px solid #000;
+}
+
+.totalsTable td:first-child {
+  width: 70%;
+}
+
+.totalsTable td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.amountDueRow td {
+  font-weight: 700;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 10mm;
+}
+
+@media print {
+  .receiptPage {
+    background: #fff;
+    padding: 0;
+  }
+
+  .printActions {
+    display: none;
+  }
+
+  .paper {
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .receiptPage {
+    padding: 12px;
+    overflow-x: auto;
+  }
+
+  .printActions {
+    width: 210mm;
+  }
+}
